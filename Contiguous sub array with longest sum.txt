@@ -1,0 +1,41 @@
+#include <stdio.h>
+void maxsumarr(int arr[], int n)
+{
+
+	int sum= 0;
+	int sum1= 0;
+	int start = 0, end = 0;
+	int beg = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sum1 = sum + arr[i];
+		if (sum1 < 0)
+		{
+			sum1 = 0;
+			beg = i + 1;
+		}
+		if (sum < sum1)
+		{
+			sum = sum1;
+			start = beg;
+			end = i;
+		}
+	}
+
+	printf("The sum of contiguous subarray with the largest sum is %d\n", 
+			sum);
+
+	printf("The contiguous subarray with the largest sum is ");
+	for (int i = start; i <= end; i++)
+		printf("%d ",arr[i]);
+}
+
+int main()
+{
+	int arr[] = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+	int n = sizeof(arr)/sizeof(arr[0]);
+
+	maxsumarr(arr, n);
+
+	return 0;
+}

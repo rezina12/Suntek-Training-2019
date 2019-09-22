@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main()
+{
+    long fact=1,i,n;
+    printf("Enter the number to find factorial for:");
+    scanf("%ld",&n);
+    for(i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("Fatorial of %ld is %ld",n,fact);
+}

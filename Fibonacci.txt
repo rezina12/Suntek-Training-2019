@@ -1,0 +1,17 @@
+#include<stdio.h>
+void main()
+{
+    long n1=0,n2=1,n3;
+    int i;
+    long ele;
+    printf("Enter the numer of elements:");
+    scanf("%ld",&ele);
+    printf("%ld %ld ",n1,n2);
+    for(i=2;i<ele;i++)
+    {
+        n3=n1+n2;
+        printf("%ld ",n3);
+        n2=n3;
+        n1=n2;
+    }
+}

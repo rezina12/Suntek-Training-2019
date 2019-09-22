@@ -1,0 +1,30 @@
+#include<stdio.h>
+void main()
+{
+    int a[3][3];
+    int i,j;
+    int size;
+    printf("Enter the size of array");
+    scanf("%d",&size);
+    printf("Enter the elements of array");
+    for(i=0;i<size;i++)
+    {
+        for(j=0;j<size;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Array of diagonal elements:");
+    printf("[");
+    for(i=0;i<size;i++)
+    {
+        for(j=0;j<size;j++)
+        {
+            if(i==j)
+            {
+                printf("%d ",a[i][j]);
+            }
+        }
+    }
+    printf("]");
+}

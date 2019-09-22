@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+    int i,base,exponent,v;
+    printf("Enter the base value:");
+    scanf("%d",&base);
+    v=base;
+    printf("Enter exponent value:");
+    scanf("%d",&exponent);
+    for(i=1;i<exponent;i++)
+    {
+        v=v*base;
+    }
+    printf("The value of %d ^%d is %d",base,exponent,v);
+}
