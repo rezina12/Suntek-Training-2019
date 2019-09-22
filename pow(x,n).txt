@@ -18,6 +18,6 @@ double powe(double base,int exponent)
     else if(exponent>0)
     return base*powe(base,exponent-1);
     else
-    return 1/pow(base,-exponent);
+    return 1/powe(base,-exponent);
     
 }
